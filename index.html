@@ -3,102 +3,61 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Crystal Market</title>
+  <title>Crystal Market | Магазин посуды</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #ffffff;
-      color: #2d2d2d;
-    }
-    header {
-      background: linear-gradient(to right, #2c003e, #4b0082);
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    h1 {
-      margin: 0;
-      font-size: 2.5em;
-      color: #f5c542;
-    }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 20px;
-      padding: 20px;
-    }
-    .item {
-      background: #f9f9f9;
-      border-radius: 15px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .item:hover {
-      transform: scale(1.03);
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    }
-    .item img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-    .item .info {
-      padding: 15px;
-    }
-    .item .info h2 {
-      font-size: 1.2em;
-      margin: 0 0 10px;
-      color: #4b0082;
-    }
-    .item .info p {
-      margin: 0;
-      color: #666;
-    }
-    .whatsapp {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25D366;
-      color: white;
-      border: none;
-      padding: 15px 20px;
-      border-radius: 50px;
-      font-size: 1.2em;
-      text-decoration: none;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      transition: background 0.3s;
-    }
-    .whatsapp:hover {
-      background-color: #1ebd5a;
+    :root {
+      --purple-dark: #3c0066;
+      --gold-dark: #bfa14c;
     }
   </style>
 </head>
-<body>
-  <header>
-    <h1>Crystal Market</h1>
-    <p>Лучший выбор посуды в Худжанде | Таҷҳизоти ошхонагӣ дар Хуҷанд</p>
+<body class="bg-white text-gray-900 font-sans">
+  <!-- Header -->
+  <header class="bg-[var(--purple-dark)] text-white py-6 shadow-lg sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto flex justify-between items-center px-4">
+      <h1 class="text-3xl font-extrabold tracking-wide">✨ Crystal Market</h1>
+      <a href="https://wa.me/992555570017" target="_blank" class="bg-[var(--gold-dark)] text-[var(--purple-dark)] px-5 py-2 rounded-xl shadow-lg hover:bg-yellow-500 transition">Связаться в WhatsApp</a>
+    </div>
   </header>
-  <div class="gallery">
-    <div class="item">
-      <img src="https://via.placeholder.com/300x200" alt="Товар 1" />
-      <div class="info">
-        <h2>Чайник стеклянный</h2>
-        <p>Цена: 120 сомони</p>
-      </div>
-    </div>
-    <div class="item">
-      <img src="https://via.placeholder.com/300x200" alt="Товар 2" />
-      <div class="info">
-        <h2>Набор тарелок</h2>
-        <p>Цена: 250 сомони</p>
-      </div>
-    </div>
-  </div>
 
-  <a class="whatsapp" href="https://wa.me/992555570017" target="_blank">
-    Заказать в WhatsApp
-  </a>
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-[var(--purple-dark)] to-purple-900 text-white py-20 text-center relative overflow-hidden">
+    <div class="absolute -top-10 -right-10 w-60 h-60 bg-[var(--gold-dark)] rounded-full opacity-20 blur-3xl animate-pulse"></div>
+    <h2 class="text-4xl md:text-5xl font-bold mb-4">Добро пожаловать в мир качественной посуды!</h2>
+    <p class="text-lg md:text-xl text-white/80">Хуш омадед ба Crystal — зебоии хона аз ҳаминҷо сар мешавад.</p>
+  </section>
+
+  <!-- Gallery / Catalog -->
+  <section class="max-w-7xl mx-auto py-16 px-4">
+    <h3 class="text-3xl font-bold text-center text-[var(--purple-dark)] mb-10">🛍️ Каталог товаров | Каталоги молҳо</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+      <!-- Item Example -->
+      <div class="bg-white border border-gray-200 rounded-3xl p-5 shadow-xl hover:scale-105 transition-transform">
+        <img src="https://via.placeholder.com/300x200" alt="Товар 1" class="w-full h-52 object-cover rounded-2xl mb-4" />
+        <h4 class="text-xl font-semibold text-[var(--purple-dark)]">Кастрюля алюминиевая | Қазони алюминӣ</h4>
+        <p class="text-[var(--gold-dark)] text-lg font-bold mt-1">85 сомони</p>
+        <a href="https://wa.me/992XXXXXXXXX?text=Хочу%20заказать%20кастрюлю" target="_blank" class="block mt-4 bg-[var(--purple-dark)] text-white py-2 rounded-xl text-center hover:bg-[var(--gold-dark)] hover:text-[var(--purple-dark)] transition">Заказать | Фармоиш</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Delivery Section -->
+  <section class="bg-gradient-to-r from-[var(--gold-dark)] to-yellow-200 py-16 text-center">
+    <h3 class="text-2xl font-bold text-[var(--purple-dark)]">🚚 Быстрая доставка</h3>
+    <p class="mt-3 text-[var(--purple-dark)] text-lg">Ба зудӣ ва қулай — то дари хонаатон!</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="py-16 bg-gray-50 text-center">
+    <h3 class="text-2xl font-bold text-[var(--purple-dark)] mb-2">📞 Свяжитесь с нами | Бо мо тамос гиред</h3>
+    <p class="text-lg">WhatsApp: <a href="https://wa.me/992555570017" class="text-[var(--gold-dark)] font-semibold hover:underline">+992555570017</a></p>
+    <p class="text-gray-600">Адрес: Рынок Сугдиён, г. Худжанд | Бозори Сугдиён, ш. Хуҷанд</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[var(--purple-dark)] text-white py-6 text-center">
+    <p>© 2025 Crystal Market</p>
+  </footer>
 </body>
 </html>
